@@ -1,0 +1,53 @@
+// Partials
+@import 'partials/fonts.scss';
+@import 'partials/form.scss';
+@import 'partials/modal.scss';
+
+@import 'singular/singular.scss';
+@import 'components/component.scss';
+
+// Reset styles
+li {
+    list-style-type: none;
+    margin-bottom: 0;
+    &:hover {
+        color: #000000;
+        text-decoration: none;
+    }
+}
+a {
+    color: #000000;
+    &:hover {
+        // color: #000000;
+        text-decoration: none;
+    }
+}
+
+
+// Titles
+
+.primary-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.secondary-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+// Buttons 
+.primary-btn {
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 10px 30px;
+    background: #000000;
+    box-shadow: -5px 3px 12px -2px #000000;
+    cursor: pointer;
+}
+
+.icon-btn {
+    cursor: pointer;
+    font-size: 22px;
+}

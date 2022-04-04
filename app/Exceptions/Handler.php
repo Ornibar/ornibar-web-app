@@ -2,8 +2,13 @@
 
 namespace App\Exceptions;
 
-use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Exception;
 use Throwable;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Symfony\Component\Routing\Exception\RouteNotFoundException;
+use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
 {
@@ -34,8 +39,46 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        $this->reportable(function (Throwable $e) {
-            //
-        });
     }
+
+
+    // /**
+    //  * Report or log an exception.
+    //  *
+    //  * @param  \Throwable  $exception
+    //  * @return void
+    //  *
+    //  * @throws \Exception
+    //  */
+    // public function report(Throwable $exception)
+    // {
+    //     parent::report($exception);
+    // }
+
+    // public function render($request, Throwable $exception)
+    // {
+    //     if ($request->expectsJson()) {
+    //         return response()->json([
+    //             'status' => 'error',
+    //             'error' => 'Unauthenticated'
+    //         ], JsonResponse::HTTP_UNAUTHORIZED);
+    //     }
+
+    //     if ($exception instanceof MethodNotAllowedHttpException) {
+    //         abort(JsonResponse::HTTP_METHOD_NOT_ALLOWED, 'Method not allowed');
+    //     }
+
+    //     if ($request->isJson() && $exception instanceof ValidationException) {
+    //         return response()->json([
+    //             'status' => 'error',
+    //             'message' => [
+    //                 'errors' => $exception->getMessage(),
+    //                 'fields' => $exception->validator->getMessageBag()->toArray()
+    //             ]
+    //         ], JsonResponse::HTTP_PRECONDITION_FAILED);
+    //     }
+
+    //     return parent::render($request, $exception);
+    // }
+
 }

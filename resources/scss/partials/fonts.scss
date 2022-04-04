@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
+
+// Font-Awesome
+// @import "~@fortawesome/fontawesome-free/css/all.min.css";
+// @import "~@fortawesome/fontawesome-free/scss/fontawesome";
+// @import "~@fortawesome/fontawesome-free/scss/regular";
+// @import "~@fortawesome/fontawesome-free/scss/solid";
+// @import "~@fortawesome/fontawesome-free/scss/brands";
+// @import "~@fortawesome/fontawesome-free/scss/v4-shims";
+
+
+
+body, p, button, ::placeholder, label, textarea, input {
+    font-family: "Spartan";
+    color: black;
+    font-size: 16px;
+}

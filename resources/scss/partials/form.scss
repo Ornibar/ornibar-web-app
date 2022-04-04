@@ -1,0 +1,59 @@
+.select-input {
+    appearance: none;
+    background-color: #fff;
+    border-color: #6b7280;
+    border-width: 1px;
+    border-radius: 0px;
+    padding-top: 0.5rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.select-input {
+    position: relative;
+
+    .icon {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        display: grid;
+        align-items: center;
+    }
+
+    .select-options {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        right: 0;
+        padding: 10px 20px;
+        box-shadow: 0 4px 10px rgba(black, .05);
+        transition: all .4s ease;
+        transform: scale(0);
+        transform-origin: top right;
+
+        &:hover {
+            background-color: lightgrey;
+        }
+    }
+
+    &.open {
+        .select-options {
+            transform: scale(1);
+        }
+    }
+}
+
+[token-generator] {
+    button {
+        width: initial !important;
+    }
+
+    input.already-created {
+        opacity: .5;
+        cursor: not-allowed;
+    }
+}

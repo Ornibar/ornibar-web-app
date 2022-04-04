@@ -1,0 +1,85 @@
+#message-flash {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(black, .5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease;
+    .message-flash--content {
+        position: relative;
+        min-width: 320px;
+        top: -200px;
+        transition: all .4s ease;
+    }
+
+    // &.error {
+    //     .message-flash--content {
+    //         color: lightcoral;
+    //     }
+    // }
+
+    // &[success] {
+    //     .message-flash--content {
+    //         color: $valid-color;
+    //     }
+    // }
+    &.open {
+        opacity: 1;
+        visibility: visible;
+
+        .message-flash--content {
+            top: 0;
+        }
+    }
+
+    .message-flash-close {
+        position: absolute;
+        right: 0;
+        top: 4px;
+        width: 32px;
+        height: 32px;
+        color: #000000;
+        z-index: 100;
+    }
+
+    .message-flash-close:hover {
+        cursor: pointer;
+    }
+
+    .message-flash-close:before,
+    .message-flash-close:after {
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 17px;
+        width: 2px;
+        background-color: #000000;
+    }
+
+    .message-flash-close:before {
+        transform: rotate(45deg);
+    }
+
+    .message-flash-close:after {
+        transform: rotate(-45deg);
+    }
+
+    .background-close {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        cursor: pointer;
+    }
+
+}
